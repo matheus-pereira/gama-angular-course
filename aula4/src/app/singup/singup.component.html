@@ -1,0 +1,19 @@
+<form class="form">
+  <h1 class="h3 mb-3 font-weight-normal">Cadastro</h1>
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email"
+      required autofocus>
+  </div>
+  <div class="form-group">
+    <label for="password">Senha</label>
+    <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password"
+      required>
+  </div>
+  <div class="form-group">
+    <label for="passwordConfirm">Confirmação de senha</label>
+    <input type="password" id="passwordConfirm" name="passwordConfirm" class="form-control" [(ngModel)]="passwordConfirm" required>
+  </div>
+  <button class="btn btn-primary" (click)="onSingUp()">Cadastrar</button>
+</form>
+<p class="mt-2">Já possui uma conta? <a routerLink="/">Entre</a></p>

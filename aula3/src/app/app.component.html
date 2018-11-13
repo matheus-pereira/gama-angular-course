@@ -1,0 +1,10 @@
+<nav class="navbar nav-pills navbar-expand container">
+    <a class="nav-link" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/todos">Todos</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/contador">Contador</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/cep">CEP</a>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

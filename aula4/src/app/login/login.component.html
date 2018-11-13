@@ -1,0 +1,11 @@
+<div class="text-center">
+  <form class="form">
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+    <label for="email" class="sr-only">E-mail</label>
+    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" [(ngModel)]="email" required autofocus>
+    <label for="password" class="sr-only">Senha</label>
+    <input type="password" id="password" name="password" class="form-control" placeholder="Senha" [(ngModel)]="password" required>
+    <button class="btn btn-primary btn-block" (click)="onLogin()">Entrar</button>
+  </form>
+  <p>Não possui conta? <a routerLink="/singup">Cadastre-se</a></p>
+</div>

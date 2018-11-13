@@ -1,0 +1,3 @@
+<div class="alert alert-info">
+  Você {{ !(messagesCount$ | async) ? 'não' : '' }} tem {{ (messagesCount$ | async) ? (messagesCount$ | async) : '' }} {{ (messagesCount$ | async) === 1 ? 'mensagem' : 'mensagens' }}
+</div>

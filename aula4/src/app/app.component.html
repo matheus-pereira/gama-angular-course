@@ -1,0 +1,11 @@
+<nav class="navbar nav-pills navbar-expand container" *ngIf="(loggedUser$ | async)">
+    <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/todos">Todos</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/contador">Contador</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/cep">CEP</a>
+    <button class="nav-link btn btn-danger ml-auto" (click)="logout()">Sair</button>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

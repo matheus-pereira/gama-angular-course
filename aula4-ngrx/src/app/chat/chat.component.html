@@ -1,0 +1,16 @@
+<form class="form">
+  <div class="form-group">
+    <label for="">Mensagem</label>
+    <input type="text" class="form-control" name="messageText" [(ngModel)]="messageText">
+  </div>
+  <button class="btn btn-primary" (click)="onSendClick()">Enviar</button>
+</form>
+
+<p class="text-muted mt-3" *ngIf="(messagesList$ | async).length">Clique em uma mensagem para deletá-la</p>
+
+<ul class="list-group my-3">
+  <li class="list-group-item" *ngFor="let message of (messagesList$ | async); let i = index" (click)="onMessageClick(i)">
+    {{ message.text }}
+    <small class="float-right text-muted">{{ message.date | date:'dd/MM/yyyy HH:mm:ss' }}</small>
+  </li>
+</ul>

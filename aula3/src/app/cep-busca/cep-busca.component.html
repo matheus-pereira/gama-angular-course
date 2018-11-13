@@ -1,0 +1,11 @@
+<form class="form">
+  <div class="form-group">
+      <label for="cep">CEP</label>
+      <input type="text" class="form-control" name="cep" [(ngModel)]="cep">
+  </div>
+  <button class="btn btn-primary" (click)="buscar()">Buscar</button>
+</form>
+
+<br><br>
+
+<app-cep-exibicao *ngIf="address" [address]="address"></app-cep-exibicao>

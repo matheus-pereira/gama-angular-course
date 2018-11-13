@@ -1,0 +1,12 @@
+<div class="card mb-3" [ngClass]="{'bg-success': item.finished, 'bg-warning': !item.finished}">
+  <div class="card-header">
+    <h5>[{{ item.id }}] {{ item.title }} <span class="float-right">{{ item.date | date: 'dd-MM-yyyy' }}</span></h5>
+    
+  </div>
+  <div class="card-body">
+    <p>{{ item.description }}</p>
+  </div>
+  <div class="card-footer">
+    <p>{{ item.finished | bool }}</p>
+  </div>
+</div>
